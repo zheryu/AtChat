@@ -1,0 +1,24 @@
+===============
+DEVELOPER NOTES
+===============
+
+PSA
+---
+To start the app, run...
+	Windows: SET DEBUG=AtChat:* & npm start
+	Linux/Mac: DEBUG=AtChat:* npm start
+
+
+TODO
+----
+1. Finish migration from old app. This means having a fully set up login and registration, and the basic chat.
+2. provide support for the verbatim command.
+3. improve chat views so they don't look like shit.
+4. provide support for the games and minirooms.
+
+
+Conventions
+-----------
+1. THIS IS CAMEL CASE DOMAIN. GET THOSE WEAKASS UNDERSCORES OUT OF HERE
+2. Try to not use knex.raw().
+3. 
