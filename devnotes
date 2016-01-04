@@ -7,7 +7,8 @@ PSA
 To start the app, run...
 	Windows: SET DEBUG=AtChat:* & npm start
 	Linux/Mac: DEBUG=AtChat:* npm start
-
+You will need to globally install grunt (npm install -g grunt-cli) to compile the bootstrap package
+'/routes' = Controllers
 
 TODO
 ----
@@ -15,10 +16,19 @@ TODO
 2. provide support for the verbatim command.
 3. improve chat views so they don't look like shit.
 4. provide support for the games and minirooms.
+5. List of games:
+	RPS - 2 player
+		opt: rps tournament
+	Coin/Dice
+	Guess the number
+	
 
 
 Conventions
 -----------
-1. THIS IS CAMEL CASE DOMAIN. GET THOSE WEAKASS UNDERSCORES OUT OF HERE
+1. Camel case only in code. Underscores are for file names
 2. Try to not use knex.raw().
-3. 
+3. This app follows MVC architecture.
+	Models go in the 'models' folder.
+	Views go in the 'views' folder.
+	Controllers go in the 'routes' folder.

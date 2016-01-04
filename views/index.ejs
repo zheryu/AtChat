@@ -3,9 +3,14 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel = "stylesheet" href = "/bootstrap/dist/css/bootstrap.css"/>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<h1><%= title %></h1>
+  	<% if(!user){ %>
+  		<% include includes/login_box %>
+  	<% } else { %>
+  		<% include includes/welcome_message %>
+  	<% } %>
   </body>
 </html>

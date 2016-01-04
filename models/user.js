@@ -3,7 +3,8 @@ var checkit = require('checkit');
 
 var User = module.exports = services.bookshelf.Model.extend({
 	tableName: 'users',
-	hasTimestamps: ['created_at', 'updated_at'],
+	idAttribute: 'userId',
+	hasTimestamps: true,
 	initialize: function(attrs, opts){
 		this.on('saving', this.validateSave);
 	},
@@ -18,8 +19,3 @@ var User = module.exports = services.bookshelf.Model.extend({
 User.someMethod = function(a, b) {
   return a + b;
 };
-
-// adding an instance method way 1
-User.prototype.someMethod(a, b) {
-  return a + b;
-}
