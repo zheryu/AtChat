@@ -27,12 +27,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(expressSession({secret: 'secret_tunnel'}));
+app.use(expressSession(config.expressSessionConfig));
 
 //passport and authentication
 app.use(passport.initialize());
 app.use(passport.session());
-require(config.passportSetup)(passport);
+config.passportSetup(passport);
 
 app.locals = config.locals;
 
